@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>My Website</title>
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <div class="navbar-left">
+                <div class="profile-circle">
+                    <img src="img/untuk_navbar.png" alt="Gambar rusak wkkw">
+                </div>
+            </div>
+            <div class="navbar-right">
+                <a href="#" class="navbar-link">Home</a>
+                <a href="#" class="navbar-link">Our Profile</a>
+                <a href="#" class="navbar-link">Achievement</a>
+                <a href="#" class="navbar-link">Message Us</a>
+            </div>
+        </div>
+        
+        <div class="welcome-section">
+            <div class="welcome-content">
+                <h1 class="welcome-title">Hi Kalfin, Welcome To Website</h1>
+                <p class="welcome-description">Ini adalah website latihan pertama</p>
+            </div>
+            <img src="img/sman19gerbang.jpg" alt="Gambar rusak wkwk">
+        </div>
+        
+        <div class="facilitation-section">
+            <a href="#" class="facilitation-link">
+                <div class="facilitation-item">
+                    <div class="facilitation-icon" style="background-image: url('img/professional_teacher.jpg');">
+                    </div>
+                    <h2 class="facilitation-title">Professional Teacher</h2>
+                </div>
+            </a>
+            <a href="#" class="facilitation-link">
+                <div class="facilitation-item">
+                    <div class="facilitation-icon" style="background-image: url('img/sport_field.jpg');">
+                    </div>
+                    <h2 class="facilitation-title">Sport Field</h2>
+                </div>
+            </a>
+            <a href="#" class="facilitation-link">
+                <div class="facilitation-item">
+                    <div class="facilitation-icon" style="background-image: url('img/classroom.jpeg');">
+                    </div>
+                    <h2 class="facilitation-title">Class Room</h2>
+                </div>
+            </a>
+        </div>
+
+        <div class="message-us-section>
+            <div class="message-us-title">
+              <h1 class="text-center" id="message">Message Us</h1>
+            </div>
+
+            <div class="split-the-form-and-show-message">
+                <div class="the-form">
+                    <form onsubmit="return false">
+                    <div class="name-section">
+                        <label for="nama" class="form-label">Nama :</label>
+                        <input type="text" class="form-control" id="nama" placeholder="Nama Anda">
+                    </div>
+
+                    <div class="tanggal-section">
+                        <label for="tanggal" class="form-label">Tanggal Lahir:</label>
+                        <input type="Date"  id="tanggal">
+                    </div>
+
+                    <div class="jenis-kelamin-section">
+                        <div class="jenis-kelamin-laki-section">
+                            <input  type="radio" name="inlineRadioOptions" id="kelamin" value="Laki-Laki">
+                            <label  for="kelamin">Laki-Laki</label>
+                        </div>
+                        <div class="jenis-kelamin-perempuan-section">
+                            <input  type="radio" name="inlineRadioOptions" id="kelamin" value="Perempuan">
+                            <label  for="kelamin">Perempuan</label>
+                        </div>
+                    </div>
+
+                    <div class="pesan-section">
+                        <label for="pesan" class="form-label">Pesan : </label>
+                        <textarea class="form-control" id="pesan" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-section" id="submitForm">Submit</button>
+                    </form>
+                </div>
+
+                <div class="show-the-message-us">
+                    <h4>Current Time : <span id="date"></span></h4>
+                    <p>Nama : <span id="hasil_nama"></span></p>
+                    <p>Tanggal Lahir: <span id="hasil_tanggal"></span></p>
+                    <p>Jenis Kelamin : <span id="hasil_kelamin"></span></p>
+                    <p>Pesan : <span id="hasil_pesan"></span></p>
+                </div>
+            </div>
+        </div>
+      
+        <footer class="footer-section">
+          <div class="footer-sub-section">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Kalfin Syah. All rights reserved.</p>
+          </div>
+        </footer>
+      
+        <script>
+          const name = "Kalfin";
+          document.getElementById("nama").innerHTML=name;
+      
+          const date = new Date();
+          document.getElementById("tanggal").innerHTML=date;
+      
+          document.getElementById("submitForm").addEventListener("click", send_message);
+      
+      
+          function send_message(){
+              var show_nama=document.getElementById("nama").value;
+              var show_tanggal=document.getElementById("tanggal").value;
+              var show_kelamin=document.getElementById("kelamin").value;
+              var show_pesan=document.getElementById("pesan").value;
+              document.getElementById("hasil_nama").innerHTML=show_nama;
+              document.getElementById("hasil_tanggal").innerHTML=show_tanggal;
+              document.getElementById("hasil_kelamin").innerHTML=show_kelamin;
+              document.getElementById("hasil_pesan").innerHTML=show_pesan;
+          }
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>
+
